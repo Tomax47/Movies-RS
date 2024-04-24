@@ -2,12 +2,6 @@ import streamlit as st
 import pickle
 import requests
 
-
-# TODO: FIX THE REQUEST BEING REFUSED ISSUE "RUSSIA IS BANNED BY THE SOURCE"
-proxies = {
-    'https': 'socks//72.195.101.99:4145'
-}
-
 movies = pickle.load(open("movies_list.pkl", "rb"))
 similarity = pickle.load(open("similarity.pkl", "rb"))
 movies_list = movies['title'].values
